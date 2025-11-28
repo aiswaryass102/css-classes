@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+    }
+
+    /* Fixed Header */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 22px;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Main Container */
+    .profile-container {
+        width: 70%;
+        margin: 100px auto; /* space below fixed header */
+        background: #fff;
+        padding: 20px;
+        min-height: 200px;
+        border-radius: 8px;
+        position: relative;
+        overflow: auto; /* scrollbars if overflow */
+    }
+
+    /* Profile Image */
+    .profile-container img {
+        float: left;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    /* Employee Info Section */
+    .employee-info {
+        margin-left: 180px; /* to give space after image */
+        padding: 10px;
+        
+        text-align: center;
+        border-right: 2px solid #ccc; /* vertical separator line */
+        padding-right: 30px;
+        min-height: 160px;
+    }
+
+    /* Contact info box (absolute) */
+    .contact-box {
+        float: right;
+        position: absolute;
+        overflow:auto;
+        top: 20px;
+        right: 20px;
+        width: 180px;
+        background: #e7f3ff;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #8bb8e8;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="header">Company Contact Card</div>
+
+<div class="profile-container">
+
+    <img src="data:image/jpeg;base64,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" alt="Profile Image">
+
+    <div class="employee-info">
+        <h2>Noah Doe</h2>
+        <h4>Senior Software Engineer</h4>
+        <p>
+            Noah is an experienced developer specializing in full-stack web applications 
+            and cloud infrastructure. He enjoys solving complex technical problems and 
+            leading project teams.
+        </p>
+    </div>
+
+    <!-- Absolute Positioned Contact Info -->
+    <div class="contact-box">
+        <strong>Contact Info</strong><br><br>
+        📞 9876543210<br>
+        ✉️ Noah.doe@example.com
+    </div>
+
+</div>
+
+</body>
+</html>

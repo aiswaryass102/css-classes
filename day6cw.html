@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Card</title>
+
+<style>
+    .product-card {
+        width: 300px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        background-color: #f9f9f9;
+        text-align: left;
+        margin: 20px auto;
+        transition: 0.3s;
+    }
+
+    /* Product Image Styling */
+    .product-img {
+        width: 100%;
+        border: 2px solid black;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: block;
+    }
+
+    .product-name {
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    .buy-btn {
+        padding: 10px 15px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    /* ------------ SMALL SCREEN STYLES ------------ */
+    @media (max-width: 600px) {
+        .product-card {
+            text-align: center;
+            font-size: 14px;
+            width: 90%;
+        }
+
+        .product-name {
+            font-size: 16px;
+        }
+    }
+
+    /* ------------ LANDSCAPE MODE ------------ */
+    @media (orientation: landscape) {
+        .product-card {
+            background-color: lightblue;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="product-card">
+    <img src="https://www.maximawatches.com/cdn/shop/files/69100CMGY-A_79d56a17-b371-4bba-9086-cbce49e8de86.jpg?v=1739601173" alt="Product" class="product-img">
+    <h2 class="product-name">Joker and Witch </h2>
+    <p>$800</p>
+    <button class="buy-btn">Buy Now</button>
+</div>
+
+</body>
+</html>

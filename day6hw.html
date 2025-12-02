@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Featured Blog Section</title>
+
+<style>
+    .blog-section {
+        padding: 20px;
+        background: #f4f4f4;
+        display: flex;
+        gap: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .blog-post {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    /* Images ending in .jpg → rounded TR & BL corners */
+    img[src$=".jpg"] {
+        width: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: block;
+    }
+
+    /* Links starting with https → red */
+    a[href^="https"] {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* ---------------- SMALL SCREEN RULES ---------------- */
+    @media (max-width: 600px) {
+        .blog-section {
+            flex-direction: column;
+            font-size: 14px;
+            align-items: center;
+        }
+
+        .blog-post {
+            width: 90%;
+        }
+    }
+
+    /* ---------------- PORTRAIT ORIENTATION ---------------- */
+    @media (orientation: portrait) {
+        .blog-section {
+            background-color: lightyellow;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="blog-section">
+
+    <div class="blog-post">
+        <h3>How to Improve Your Coding Skills</h3>
+        <img src="https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg" alt="Coding Tips">
+        <a href="https://www.futurelearn.com/subjects/it-and-computer-science-courses/coding-programming">Read More</a>
+    </div>
+
+    <div class="blog-post">
+        <h3>Design Trends for 2025</h3>
+        <img src="https://cdn.logojoy.com/wp-content/uploads/20250116125638/Graphic-Design-Trends_2025-header-image.jpg" alt="Design Trends">
+        <a href="https://www.udemy.com/courses/design/?srsltid=AfmBOoqqzI6pNiyfJq2vbO_sWOpxSoUlvikg-NJGahzANMsXQUmDUyJl">Read More</a>
+    </div>
+
+    <div class="blog-post">
+        <h3>Understanding Web Performance</h3>
+        <img src="https://blog.pixelfreestudio.com/wp-content/uploads/2024/07/web-performance-optimization-featured.jpg" alt="Performance">
+        <a href="https://www.udemy.com/courses/development/web-development/?srsltid=AfmBOoq0LuJ2TvrTBuiczYEFOOEx6I36RC5k1uarBWpAKpD5I1OBft2j">Read More</a>
+    </div>
+
+</div>
+
+</body>
+</html>
